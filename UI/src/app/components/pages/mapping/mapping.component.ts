@@ -27,8 +27,4 @@ export class MappingComponent implements OnInit {
   get state() {
     return this.stateService.state;
   }
-
-  trackByFn(index) {
-    return index;
-  }
 }

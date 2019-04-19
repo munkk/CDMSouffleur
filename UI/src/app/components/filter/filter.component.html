@@ -12,7 +12,7 @@
 
     <main>
       <mat-list role="list">
-        <mat-list-item role="listitem" *ngFor="let item of data">
+        <mat-list-item role="listitem" *ngFor="let item of data; trackBy: item?.id">
           <mat-checkbox [checked]="isChecked(item)" (change)="onCheckboxChange($event, item)">
           </mat-checkbox>
           <span>

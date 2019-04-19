@@ -1,7 +1,7 @@
 <section>
     <main class="main">
         <app-area area="source">
-            <ng-container *ngFor="let table of state?.source.tables; trackBy: trackByFn" >
+            <ng-container *ngFor="let table of state?.source.tables; trackBy: table?.id" >
                 <ng-container *ngIf="table.visible">
                     <app-panel [table]="table" >
                         <app-panel-table 
@@ -32,7 +32,7 @@
         </div>
 
         <app-area area="target">
-            <ng-container *ngFor="let table of state?.target.tables; trackBy: trackByFn" >
+            <ng-container *ngFor="let table of state?.target.tables; trackBy: table?.id" >
                 <ng-container *ngIf="table.visible">
                     <app-panel [table]="table">
                         <app-panel-table 
